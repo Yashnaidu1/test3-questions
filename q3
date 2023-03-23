@@ -1,0 +1,39 @@
+#include <stdio.h>
+
+void add(int* num1, int* num2);
+void subtract(int* num1, int* num2);
+void multiply(int* num1, int* num2);
+
+int main() {
+    int num1, num2;
+    printf("Enter two numbers:\n");
+    scanf("%d%d", &num1, &num2);
+
+    add(&num1, &num2);
+    subtract(&num1, &num2);
+    multiply(&num1, &num2);
+
+    return 0;
+}
+
+void add(int* num1, int* num2) {
+    int result = *num1 + *num2;
+    printf("The sum of %d and %d is %d.\n", *num1, *num2, result);
+}
+
+void subtract(int* num1, int* num2) {
+    int result = *num1 - *num2;
+    printf("The difference between %d and %d is %d.\n", *num1, *num2, result);
+}
+
+void multiply(int* num1, int* num2) {
+    int result = *num1 * *num2;
+    printf("The product of %d and %d is %d.\n", *num1, *num2, result);
+}
+0utput :-
+Enter two numbers:
+10
+20
+The sum of 10 and 20 is 30.
+The difference between 10 and 20 is -10.
+The product of 10 and 20 is 200
